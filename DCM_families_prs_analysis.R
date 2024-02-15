@@ -44,6 +44,5 @@ wald_unaffected_vs_affected <- glmm.wald(as.factor(affected) ~ 1, data = all_sco
 wald_unaffected_vs_affected
 exp(wald_unaffected_vs_affected$BETA)
 
-
 # Benjamini and Hochberg correction for multiple testing 
 p.adjust(c(wald_control_vs_affected$PVAL, wald_control_vs_unaffected$PVAL, wald_unaffected_vs_affected$PVAL), method = "BH")
